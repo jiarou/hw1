@@ -1,0 +1,107 @@
+@charset "utf-8";
+body{
+	
+background-color:#45E4CE;
+}
+#main{
+	
+	width:1071px;
+	height:800px;
+	
+	margin:0 auto;
+	
+	}
+
+
+#Header{
+	width:900px;
+	height:80px;
+	text-align:center;
+	line-height:80px;
+	}
+	.imge01{
+		float:left;
+		margin-left: 150px;
+		z-index:1;
+	}
+
+
+#list li{
+	position:relative;
+	left:150px;
+	line-height:50px;
+	font-size:20px;
+	list-style-type: none;
+	display:inline;
+	padding:5px 10px;
+		width:500px;
+		height: 500px;
+		border-radius:100px;
+		background-color: #F4F4F4;
+	}
+	
+	#list li a{
+		text-decoration:none;
+		color:#D52D30;
+		font-weight:bold;
+		
+		}
+	
+	.here{
+			border: 1px  dashed black;
+			
+			}
+	.tree{
+		
+		position:absolute;	
+	    top: 156px;
+        left: 1072px;
+		opacity:0.8;
+
+		z-index:-1;
+	
+			
+		}
+			
+			
+	#Content{
+		margin-top:50px;
+		width:1071px;
+		height:500px;  
+		 float:left;
+		
+		 
+		}
+		
+		#about{
+			width:800px;
+			height:400px;
+			margin-left:150px;
+			
+			border:   dashed  #F6F6F6;
+			overflow-y:auto;
+			font-size:18px;
+			 border-radius:20px;
+			
+			}
+			.fat{
+				font-weight: bold;
+				}
+		.activity01{
+			  border:1px solid #999;
+              padding:5px;
+              background:#efefef;
+			  border-radius:20px;
+			  margin-left:150px;
+		}
+	
+	#footer{
+		
+		height:80px;
+		
+		text-align:center;
+		
+		}
+		
+
+
