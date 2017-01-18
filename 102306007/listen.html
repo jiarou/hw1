@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ECPAT TAIWAN</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/activity_new.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 幫 #qaContent 的 ul 子元素加上 .accordionPart
+		// 接著再找出 li 中的第一個 div 子元素加上 .qa_title
+		// 並幫其加上 hover 及 click 事件
+		// 同時把兄弟元素加上 .qa_content 並隱藏起來
+		$('#qaContent ul').addClass('accordionPart').find('li div:nth-child(1)').addClass('qa_title').hover(function(){
+			$(this).addClass('qa_title_on');
+		}, function(){
+			$(this).removeClass('qa_title_on');
+		}).click(function(){
+			// 當點到標題時，若答案是隱藏時則顯示它，同時隱藏其它已經展開的項目
+			// 反之則隱藏
+			var $qa_content = $(this).next('div.qa_content');
+			if(!$qa_content.is(':visible')){
+				$('#qaContent ul li div.qa_content:visible').slideUp();
+			}
+			$qa_content.slideToggle();
+		}).siblings().addClass('qa_content').hide();
+	});
+</script>
+</head>
+
+
+
+<body>
+<div id="main">
+  <div id="header">
+   <div class="icon">
+    <a href="index.html">
+   <img src="image/1.jpg">
+   </a>
+   </div>
+
+   <div class="menu">
+    <ul>
+      <li><a href="about.html">關於我們</a></li>
+     <li><a href="active.html" >聽見兒童與少年</a></li>
+      <li><a href="listen.html">影音</a></li>
+      <li><a href="call.html">聯絡我們</a></li>
+    </ul>
+
+    </div>
+
+   </div>
+   
+   <div id="active_content">
+      
+        <div id="active_new">
+       
+       <div id="qaContent">
+       <h3 class="qa_group_1">展翅協會生日捐Birthday Donation (ECPAT Taiwan)</h3>
+	<ul class="accordionPart">
+		<li>
+			<div class="qa_title">【一起成為展翅公益壽星】2016展翅生日捐公益廣告(公益大使：Anna Lee、榮忠豪、正皓玄) </div>
+			<div class="qa_content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YfHbqBObNPs" frameborder="0" allowfullscreen></iframe>
+        </div>
+		</li>
+        	<li>
+			<div class="qa_title">【《你捐款、我送禮》生日做公益】第二季的展翅生日捐開跑囉！(feat.青樺婚紗企業董事長 蔡青樺)</div>
+			<div class="qa_content">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/7dWsVj7W-4Q" frameborder="0" allowfullscreen></iframe>
+
+</div>
+		</li>
+        <li>
+        		<div class="qa_title">2014展翅協會生日捐-房思瑜篇</div>
+			<div class="qa_content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wMNBnR1pkgE" frameborder="0" allowfullscreen></iframe>
+
+</div>
+		</li>
+               
+	</ul>
+    
+     <h3 class="qa_group_1">兒少上網安全</h3>
+	<ul class="accordionPart">
+		<li>
+			<div class="qa_title">點一點--兒少上網安全歌 </div>
+			<div class="qa_content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TeEXs8SgqxI" frameborder="0" allowfullscreen></iframe>
+        </div>
+		</li>
+        	<li>
+			<div class="qa_title">關於青少年自拍裸照--家長及照顧者需要知道的事情(一)</div>
+			<div class="qa_content">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/tThcfHCwsAA" frameborder="0" allowfullscreen></iframe>
+
+</div>
+		</li>
+        <li>
+        		<div class="qa_title">關於青少年自拍裸照--家長及照顧者需要知道的事情(二)</div>
+			<div class="qa_content">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Fjv7pBYcLsc" frameborder="0" allowfullscreen></iframe>
+</div>
+		</li> 
+                <li>
+        		<div class="qa_title">關於青少年自拍裸照--家長及照顧者需要知道的事情(三)</div>
+			<div class="qa_content">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/T7h0eSAZ-pY" frameborder="0" allowfullscreen></iframe>
+</div>
+		</li>             
+	</ul>
+    
+     <h3 class="qa_group_1">台灣展翅協會公益廣告ECPAT Taiwan CFs</h3>
+	<ul class="accordionPart">
+		<li>
+			<div class="qa_title">網路安全公益廣告-網路沈迷篇</div>
+			<div class="qa_content">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/K_BdFXu_lMg" frameborder="0" allowfullscreen></iframe>
+        </div>
+		</li>
+        	<li>
+			<div class="qa_title">網路安全公益廣告-網路交友篇</div>
+			<div class="qa_content">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/dyRIOqoR9k0" frameborder="0" allowfullscreen></iframe>
+
+</div>
+		</li>
+        <li>
+        		<div class="qa_title">防制人口販運宣導廣告 人肉市場篇 30sec</div>
+			<div class="qa_content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Iox-p9htVy8" frameborder="0" allowfullscreen></iframe>
+</div>
+		</li>
+        
+        
+        
+        
+        
+	</ul>
+</div>
+
+       
+       
+       
+       
+       
+        </div>
+   </div>
+
+   <footer class="footer" style=" text-align:center; background-color:white; margin-top:50px"  >
+<a href="https://www.facebook.com/ECPATTaiwan"><img src="image/facebook.png"  style="width:30px; margin-bottom:5px"> </a>
+ <a href="https://www.youtube.com/user/ecpattw"><img src="image/youtube.png" style="width:30px;margin-bottom:5px"></a> <br>
+
+<a href="http://www.ecpat.org.tw/children/knowledge.asp?qbid=294" style=" text-decoration:none; color:black; ">Copyright© 2007 ECPAT TAIWAN All Rights Reserved</a>
+</footer>
+
+</div>
+
+</body>
+</html>
+
+
+

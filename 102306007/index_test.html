@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ECPAT TAIWAN</title>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+$(function(){
+	$('#menu_btn').click(function(){
+		$('#menu_m').animate({
+			left:"0%"}, 200);
+		});
+	})
+$(function(){
+	$('#menu_cancel').click(function(){
+		$('#menu_m').animate({
+			left:"-100%"}, 200);
+		});
+	})
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<style type="text/css">
+  #abgne_float_ad {
+    display: none;
+    position: absolute;
+    z-index: 11;
+  }
+  #abgne_float_ad .abgne_close_ad {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  #abgne_float_ad a img {
+    border: none;
+  }
+  div.bigDiv {
+    height: 100px;
+  }
+
+</style>
+<script type="text/javascript">
+  $(window).load(function(){
+    var $win = $(window),
+      $ad = $('#abgne_float_ad').css('opacity', 0).show(),  // 讓廣告區塊變透明且顯示出來
+      _width = $ad.width(),
+      _height = $ad.height(),
+      _diffY = 200, _diffX = 0, // 距離右及上方邊距
+      _moveSpeed = 800; // 移動的速度
+    
+    // 先把 #abgne_float_ad 移動到定點
+    $ad.css({
+      top: _diffY,  // 往上
+      left: $win.width() - _width - _diffX,
+      opacity: 1
+    });
+    
+    // 幫網頁加上 scroll 及 resize 事件
+    $win.bind('scroll resize', function(){
+      var $this = $(this);
+      
+      // 控制 #abgne_float_ad 的移動
+      $ad.stop().animate({
+        top: $this.scrollTop() + _diffY,  // 往上
+        left: $this.scrollLeft() + $this.width() - _width - _diffX
+      }, _moveSpeed);
+    }).scroll();  // 觸發一次 scroll()
+    
+    // 關閉廣告
+    $('#abgne_float_ad .abgne_close_ad').click(function(){
+      $ad.hide();
+    });
+  });
+</script>
+
+
+</head>
+
+
+
+<body>
+<div id="main">
+  <div id="header">
+   <div class="icon">
+   <a href="index.html">
+   <img src="image/1.jpg">
+   </a>
+   </div>
+
+   <div class="menu">
+    <ul>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="active.html" >活動資訊</a></li>
+      <li><a href="listen.html">影音</a></li>
+      <li><a href="call.html">聯絡我們</a></li>
+    </ul>
+
+    </div>
+
+   </div>
+   
+
+    	
+   <div class="bigDiv"></div>
+ 
+<div  id="abgne_float_ad" >
+
+<div class="next_button">
+  <a href="http://www.ecpat.org.tw/dmisc/donation.asp"><p style="position:absolute;top:44px;left: 29px; z-index: 3; font-size:30px; color:white;">我要捐款</p></a>
+ <div class="abgne-frame-20140107-1">
+		<img src="image/4.jpg"  style="width:200px;height:200px; border-radius:99em;z-index:1;"/>
+<a class="overlay"   href="#" onclick="window.open('http://www.ecpat.org.tw/dmisc/donation.asp','捐款',config='height=500,width=500');"  style="width:150;height:150;border-radius:99em;z-index:1;"></a>
+	</div>
+
+</div>
+
+
+
+   </div>
+   
+   <div id="content">
+   
+   
+	  <div id="Tabs1">
+     <ul>
+       <li><a href="#tabs-1">活動快訊</a></li>
+       <li><a href="#tabs-2">活動報導</a></li>
+       <li><a href="#tabs-3">歷年活動</a></li>
+     </ul>
+     <div id="tabs-1">
+       <iframe src="activity_new.html" style="width:1200px; height:900px;margin-top: 50px;
+"></iframe>
+     </div>
+     <div id="tabs-2">
+      <iframe src="activity_new.html" style="width:1200px; height:900px;margin-top: 50px;
+"></iframe>
+     </div>
+     <div id="tabs-3">
+     <iframe src="activity_new.html" style="width:1200px; height:900px;margin-top: 50px;
+"></iframe>
+     </div>
+  </div>
+	
+  
+   </div>
+   
+   
+   <footer class="footer" style=" text-align:center; background-color:white"  >
+<a href="https://www.facebook.com/ECPATTaiwan"><img src="image/facebook.png"  style="width:30px; margin-bottom:5px"> </a>
+ <a href="https://www.youtube.com/user/ecpattw"><img src="image/youtube.png" style="width:30px;margin-bottom:5px"></a> <br>
+
+<a href="http://www.ecpat.org.tw/children/knowledge.asp?qbid=294" style=" text-decoration:none; color:black; ">Copyright© 2007 ECPAT TAIWAN All Rights Reserved</a>
+</footer>
+
+ </div>
+
+
+
+</body>
+</html>

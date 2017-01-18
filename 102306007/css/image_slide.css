@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document */
+.icon{
+	position:absolute;
+	z-index:2;
+
+	
+	}
+#main{
+	margin:0 auto;
+	width:1400px;
+	height:900px;
+	border:10px solid #BABABA;
+	border-radius:30px;
+	}
+	
+#enter{
+    position: absolute;
+    z-index: 2;
+    font-size: 70px;
+    top: 700px;
+    left: 1000px;
+	}
+#enter a{
+	color:black;
+	text-decoration:none;
+	}	
+#enter a:hover{
+	color:#A5A1A1;
+	}	
+
+img{
+	opacity:0.5;
+	}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;  
+}
+ 
+a img {
+	border: none;
+	
+}
+ 
+#abgne-block-20110406 {
+	
+	width: 632px;	/* 框架圖片的寬 */
+	height: 438px;	/* 框架圖片的高 */
+	position: relative;
+	background: url('images/frame.gif') no-repeat;
+}
+ 
+#abgne-block-20110406 a.prev, #abgne-block-20110406 a.next {
+	position: absolute;
+	
+	top: 173px;
+	display: block;
+	width: 56px;	/* 左右鈕圖片的寬 */
+	height: 53px;	/* 左右鈕圖片的高 */
+	text-indent: -9999px;
+}
+ 
+#abgne-block-20110406 .prev {
+	background: url('images/left.png') no-repeat;
+}
+ 
+#abgne-block-20110406 .next {
+	background: url('images/right.png') no-repeat;
+	right: 0;
+}
+ 
+#abgne-block-20110406 .slides {
+	overflow: hidden;
+	position: relative;
+	width: 1400px;	/* 框架中間區塊的寬 */
+	height: 900px;	/* 框架中間區塊的高 */
+}
+ 
+#abgne-block-20110406 .slides ul {
+	position: absolute;
+	width: 9990px;
+	height: 100%;
+}
+ 
+#abgne-block-20110406 .slides li {
+	
+	width: 1400px;	/* 框架中間區塊的寬 */
+	height: 100%;
+	float: left;
+} 
+

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ECPAT TAIWAN</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
+</head>
+
+
+
+<body>
+<div id="main">
+  <div id="header">
+   <div class="icon">
+   <a href="index.html">
+   <img src="image/1.jpg">
+   </a>
+   </div>
+
+   <div class="menu">
+    <ul>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="active.html" >聽見兒童與少年</a></li>
+      <li><a href="listen.html">影音</a></li>
+      <li><a href="call.html">聯絡我們</a></li>
+    </ul>
+
+    </div>
+    
+ </div>   
+<div id="content">
+  <div style=" font-size:40px; font-weight:900; font-family:Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif; margin-top:50px; margin-left:500px;">訪客留言板</div>
+  
+  
+  <div id="call_content" onfocus="MM_validateForm('name','','R','address','','R','e-mail','','RisEmail');return document.MM_returnValue">
+   
+   <form  action="mailto:ruby620918@gmail.com" method="post" style="margin-left:50px;" onSubmit="MM_validateForm('name','','R','address','','R','e-mail','','RisEmail');return document.MM_returnValue">
+   
+姓名： <input id="name" type="text"; size=6 maxlength=6 style="margin-bottom:30px;margin-top:10px;padding-right:90px;padding-bottom:10px"><br>
+
+地址：<input id="address" type="text"; maxlength=30 style="margin-bottom:30px;padding-right:90px;padding-bottom:10px"><br>
+e-mail：<input type="text" id="e-mail" style="margin-bottom:30px;padding-right:90px;padding-bottom:10px" onBlur="MM_validateForm('name','','R','address','','R','e-mail','','RisEmail');return document.MM_returnValue" maxlength=30><br>
+
+性別：
+<input type="radio" name="sex" value="M" checked>男生
+<input type="radio" name="sex" value="F">女生<br><br>
+訪客留言：<br>
+<textarea style="width:200px; height:100px; margin-left:90px;">
+ </textarea><br>
+
+
+<input type="submit" id="sumbit" name="Submit" value="傳送" style="font-size:20px;">
+
+</form>
+  
+   </div>
+   
+    <img class="wins" src="image/4.jpg" width="300" height="300" alt=""/>
+   </div>
+   <footer class="footer" style=" text-align:center; background-color:white"  >
+<a href="https://www.facebook.com/ECPATTaiwan"><img src="image/facebook.png"  style="width:30px; margin-bottom:5px"> </a>
+ <a href="https://www.youtube.com/user/ecpattw"><img src="image/youtube.png" style="width:30px;margin-bottom:5px"></a> <br>
+
+<a href="http://www.ecpat.org.tw/children/knowledge.asp?qbid=294" style=" text-decoration:none; color:black; ">Copyright© 2007 ECPAT TAIWAN All Rights Reserved</a>
+</footer>
+
+</div>
+
+</body>
+</html>

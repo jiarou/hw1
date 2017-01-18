@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ECPAT TAIWAN</title>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/activity_new.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		// 幫 #qaContent 的 ul 子元素加上 .accordionPart
+		// 接著再找出 li 中的第一個 div 子元素加上 .qa_title
+		// 並幫其加上 hover 及 click 事件
+		// 同時把兄弟元素加上 .qa_content 並隱藏起來
+		$('#qaContent ul').addClass('accordionPart').find('li div:nth-child(1)').addClass('qa_title').hover(function(){
+			$(this).addClass('qa_title_on');
+		}, function(){
+			$(this).removeClass('qa_title_on');
+		}).click(function(){
+			// 當點到標題時，若答案是隱藏時則顯示它，同時隱藏其它已經展開的項目
+			// 反之則隱藏
+			var $qa_content = $(this).next('div.qa_content');
+			if(!$qa_content.is(':visible')){
+				$('#qaContent ul li div.qa_content:visible').slideUp();
+			}
+			$qa_content.slideToggle();
+		}).siblings().addClass('qa_content').hide();
+	});
+</script>
+<style type="text/css">
+  #abgne_float_ad {
+    display: none;
+    position: absolute;
+    z-index: 11;
+  }
+  #abgne_float_ad .abgne_close_ad {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  #abgne_float_ad a img {
+    border: none;
+  }
+  div.bigDiv {
+    height: 100px;
+  }
+
+</style>
+<script type="text/javascript">
+  $(window).load(function(){
+    var $win = $(window),
+      $ad = $('#abgne_float_ad').css('opacity', 0).show(),  // 讓廣告區塊變透明且顯示出來
+      _width = $ad.width(),
+      _height = $ad.height(),
+      _diffY = 200, _diffX = 0, // 距離右及上方邊距
+      _moveSpeed = 800; // 移動的速度
+    
+    // 先把 #abgne_float_ad 移動到定點
+    $ad.css({
+      top: _diffY,  // 往上
+      left: $win.width() - _width - _diffX,
+      opacity: 1
+    });
+    
+    // 幫網頁加上 scroll 及 resize 事件
+    $win.bind('scroll resize', function(){
+      var $this = $(this);
+      
+      // 控制 #abgne_float_ad 的移動
+      $ad.stop().animate({
+        top: $this.scrollTop() + _diffY,  // 往上
+        left: $this.scrollLeft() + $this.width() - _width - _diffX
+      }, _moveSpeed);
+    }).scroll();  // 觸發一次 scroll()
+    
+    // 關閉廣告
+    $('#abgne_float_ad .abgne_close_ad').click(function(){
+      $ad.hide();
+    });
+  });
+</script>
+</head>
+
+
+
+<body>
+<div id="main">
+  <div id="header">
+   <div class="icon">
+      <a href="index.html">
+   <img src="image/1.jpg">
+   </a>
+   </div>
+
+   <div class="menu">
+    <ul>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="active.html" >聽見兒童與少年</a></li>
+      <li><a href="listen.html">影音</a></li>
+      <li><a href="call.html">聯絡我們</a></li>
+    </ul>
+
+    </div>
+
+  </div>
+
+   <div id="Tabs1" ">
+     <ul>
+       <li><a href="#tabs-1">活動快訊</a></li>
+       <li><a href="#tabs-2">活動報導</a></li>
+      
+     </ul>
+     <div id="tabs-1" style="width:1200px; height:800px;
+">
+       <iframe src="activity_new.html" style="width:1200px;height:800px; 
+"></iframe>
+     </div>
+     <div id="tabs-2">
+      <iframe src="activity_paper.html" style="width:1200px;height:800px;
+"></iframe>
+     </div>
+     
+  </div>
+
+  
+    
+ 
+<div  id="abgne_float_ad" >
+
+<div class="next_button">
+  <a href="http://www.ecpat.org.tw/dmisc/donation.asp"><p style="position:absolute;top:44px;left: 29px; z-index: 3; font-size:30px; color:white;">我要捐款</p></a>
+ <div class="abgne-frame-20140107-1">
+		<img src="image/4.jpg"  style="width:200px;height:200px; border-radius:99em;z-index:1;"/>
+<a class="overlay"   href="#" onclick="window.open('http://www.ecpat.org.tw/dmisc/donation.asp','捐款',config='height=500,width=500');"  style="width:150;height:150;border-radius:99em;z-index:1;"></a>
+	</div>
+
+</div>
+
+
+
+   </div>
+      	
+
+<footer class="footer" style=" text-align:center; background-color:white"  >
+<a href="https://www.facebook.com/ECPATTaiwan"><img src="image/facebook.png"  style="width:30px; margin-bottom:5px"> </a>
+ <a href="https://www.youtube.com/user/ecpattw"><img src="image/youtube.png" style="width:30px;margin-bottom:5px"></a> <br>
+
+<a href="http://www.ecpat.org.tw/children/knowledge.asp?qbid=294" style=" text-decoration:none; color:black; ">Copyright© 2007 ECPAT TAIWAN All Rights Reserved</a>
+</footer>
+
+ 
+ 
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+
+</script>
+</body>
+</html>
+
